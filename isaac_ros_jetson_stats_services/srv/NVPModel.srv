@@ -1,0 +1,8 @@
+# This service set a new NVPmodel on your board.
+# This service is available only on Jetson enabled boards
+# Request
+int64 nvpmodel
+---
+# Response
+# Indicate successful NVPModel name.
+string power_mode

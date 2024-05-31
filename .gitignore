@@ -1,0 +1,20 @@
+# Compiled python modules.
+*.pyc
+
+# Setuptools distribution folder.
+_build/
+dist/
+doc/
+build/
+
+# log file
+*.log
+
+# Unit test / coverage reports
+.tox/
+.cache/
+swapfile
+test.*
+jtop_test.*
+*.csv
+.dccache

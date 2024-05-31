@@ -1,0 +1,10 @@
+# This service set fan profile and speed.
+# Check all profiles available on NVIDIA Jetson documentation or running jtop
+# Request
+string profile
+int64 speed
+---
+# Response
+# Indicate successful profile selected and new speed
+string new_profile
+int64 new_speed 
