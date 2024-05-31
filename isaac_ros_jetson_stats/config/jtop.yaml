@@ -1,0 +1,47 @@
+analyzers:
+  ros__parameters:
+    jtop:
+      type: diagnostic_aggregator/AnalyzerGroup
+      path: jtop
+      contains: [ 'jetson_stats' ]
+      analyzers:
+        cpu:
+          type: diagnostic_aggregator/GenericAnalyzer
+          path: CPU
+          contains: [ 'cpu' ]
+          remove_prefix: [ 'jetson_stats cpu' ]
+        gpu:
+          type: diagnostic_aggregator/GenericAnalyzer
+          path: GPU
+          contains: [ 'gpu' ]
+          remove_prefix: [ 'jetson_stats gpu' ]
+        memory:
+          type: diagnostic_aggregator/GenericAnalyzer
+          path: Memory
+          contains: [ 'mem' ]
+          remove_prefix: [ 'jetson_stats mem' ]
+        engine:
+          type: diagnostic_aggregator/GenericAnalyzer
+          path: Engine
+          contains: [ 'engine' ]
+          remove_prefix: [ 'jetson_stats engine' ]
+        temperatures:
+          type: diagnostic_aggregator/GenericAnalyzer
+          path: Temperature
+          contains: [ 'temp' ]
+          remove_prefix: [ 'jetson_stats temp' ]
+        power:
+          type: diagnostic_aggregator/GenericAnalyzer
+          path: Power
+          contains: [ 'power' ]
+          remove_prefix: [ 'jetson_stats power' ]
+        board:
+          type: diagnostic_aggregator/GenericAnalyzer
+          path: Board
+          contains: [ 'board' ]
+          remove_prefix: [ 'jetson_stats board' ]
+        fan:
+          type: diagnostic_aggregator/GenericAnalyzer
+          path: Board
+          contains: [ 'fan' ]
+          remove_prefix: [ 'jetson_stats fan' ]

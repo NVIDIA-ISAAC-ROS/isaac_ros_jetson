@@ -1,0 +1,8 @@
+# This service enable or disable Jetson Clocks.
+# This service is available only on Jetson enabled boards
+# Request
+bool status
+---
+# Response
+# Indicate successful Jetson Clocks status.
+bool done
