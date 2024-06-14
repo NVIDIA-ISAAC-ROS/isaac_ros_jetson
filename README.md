@@ -38,6 +38,8 @@ Isaac ROS Jetson provides a set of messages to monitor the health of your board 
 
 As an illustration, consider a scenario where your board is under high power demand. In such a case, a node that reads the diagnostics message can dynamically adjust the `nvp` power mode or even disable certain nodes that are consuming excessive computational resources. This dynamic power management capability is a key feature of the tool.
 
+Using the `isaac_ros_jetson` package in a Docker container can greatly improve the robustness and reliability of your project. This method ensures a consistent and isolated environment, reducing compatibility issues and making deployment across different platforms easier.
+
 ---
 
 ## Documentation
@@ -50,6 +52,7 @@ See [Isaac ROS Documentation](https://nvidia-isaac-ros.github.io/repositories_an
 
 * [`isaac_ros_jetson_stats`](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_jetson/isaac_ros_jetson_stats/index.html)
   * [Quickstart](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_jetson/isaac_ros_jetson_stats/index.html#quickstart)
+  * [Control your Jetson](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_jetson/isaac_ros_jetson_stats/index.html#control-your-jetson)
   * [Troubleshooting](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_jetson/isaac_ros_jetson_stats/index.html#troubleshooting)
   * [API](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_jetson/isaac_ros_jetson_stats/index.html#api)
 * [`isaac_ros_jetson_stats_services`](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_jetson/isaac_ros_jetson_stats_services/index.html)
