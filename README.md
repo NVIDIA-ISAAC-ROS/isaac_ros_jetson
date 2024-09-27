@@ -59,4 +59,4 @@ See [Isaac ROS Documentation](https://nvidia-isaac-ros.github.io/repositories_an
 
 ## Latest
 
-Update 2024-05-30: Initial release
+Update 2024-09-26: Update for Isaac ROS 3.1
