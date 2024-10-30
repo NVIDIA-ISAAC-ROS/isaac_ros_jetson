@@ -38,6 +38,7 @@
   <exec_depend>diagnostic_aggregator</exec_depend>
   <exec_depend>isaac_ros_jetson_stats_services</exec_depend>
   <exec_depend>rosidl_default_runtime</exec_depend>
+  <exec_depend>python-jetson-stats-pip</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
