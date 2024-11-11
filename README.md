@@ -19,7 +19,7 @@ The Isaac ROS Jetson Stats package wraps the output from the [jetson_stats](http
 It remaps all board statuses to the desired format for more accessible analysis and monitoring.
 
 The package provides the following features:
-: * System Monitoring
+  * System Monitoring
   * Fan Control
   * GPU Frequency Control
   * Power Management
