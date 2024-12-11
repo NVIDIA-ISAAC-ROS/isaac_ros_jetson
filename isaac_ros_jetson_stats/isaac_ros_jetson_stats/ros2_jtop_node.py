@@ -117,17 +117,41 @@ class JTOPPublisher(Node):
         return resp
 
     def nvpmodel_service(self, req, resp):
+        def loop_condition(condition, timeout_s=10):
+            timeout_ns = timeout_s * 10e9
+            start_time = self.get_clock().now().nanoseconds
+            time_delta_ns = 0
+            while condition():
+                if time_delta_ns > timeout_ns:
+                    return False
+                time_delta_ns = self.get_clock().now().nanoseconds - start_time
+            return True
+
         # Set new nvpmodel
         if self.jetson.nvpmodel is not None:
             nvpmodel = req.nvpmodel
             try:
                 self.jetson.nvpmodel = nvpmodel
-                power_mode = str(self.jetson.nvpmodel)
-                self.get_logger().info(
-                    f'New NVPModel status:{nvpmodel} {power_mode}')
-            except jtop.JtopException:
-                nvpmodel = self.jetson.nvpmodel
-                self.get_logger().error('Fail to set new NVPModel status')
+                if not loop_condition(self.jetson.nvpmodel.is_running):
+                    power_mode = 'Timeout'
+                    self.get_logger().error('Timeout waiting for NVPModel command')
+                elif self.jetson.nvpmodel.status[nvpmodel]:
+                    expected_model = self.jetson.nvpmodel.models[nvpmodel]
+                    if not loop_condition(lambda: expected_model != self.jetson.nvpmodel.name):
+                        power_mode = 'Timeout'
+                        self.get_logger().error('Timeout waiting for NVPModel to reflect change')
+                    else:
+                        power_mode = str(self.jetson.nvpmodel)
+                        self.get_logger().info(
+                            f'New NVPModel status:{nvpmodel} {power_mode}')
+                else:
+                    power_mode = 'Exception'
+                    self.get_logger().error('New NVPModel cannot be set using `jtop`. Use ' +
+                                            f'`nvpmodel -m {nvpmodel}` to see the issue in ' +
+                                            'terminal.')
+            except jtop.JtopException as e:
+                power_mode = 'Exception'
+                self.get_logger().error(f'Failed to set new NVPModel status. Exception: {e}')
             resp.power_mode = power_mode
         else:
             resp.power_mode = 'Not available'

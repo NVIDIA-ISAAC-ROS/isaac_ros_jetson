@@ -24,13 +24,14 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>isaac_ros_jetson_stats</name>
-  <version>3.1.0</version>
+  <version>3.2.0</version>
   <description>Isaac ROS Jetson. Set of packages to control your jetson from your board</description>
   <author email="rbonghi@nvidia.com">Raffaello Bonghi</author>
   <maintainer email="isaac-ros-maintainers@nvidia.com">Isaac ROS Maintainers</maintainer>
   <license>MIT</license>
 
   <build_depend>rosidl_default_generators</build_depend>
+  <build_depend>isaac_ros_common</build_depend>
 
   <exec_depend>rclpy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
