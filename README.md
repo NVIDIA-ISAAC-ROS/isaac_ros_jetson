@@ -59,4 +59,4 @@ See [Isaac ROS Documentation](https://nvidia-isaac-ros.github.io/repositories_an
 
 ## Latest
 
-Update 2024-09-26: Update for Isaac ROS 3.1
+Update 2024-12-10: Update to be compatible with JetPack 6.1

@@ -20,10 +20,31 @@
 # DEALINGS IN THE SOFTWARE.
 
 from glob import glob
+import importlib.util
 from os import path
+from pathlib import Path
+import sys
 
+from ament_index_python.packages import get_resource
 from setuptools import setup
 
+ISAAC_ROS_COMMON_PATH = get_resource(
+    'isaac_ros_common_scripts_path',
+    'isaac_ros_common'
+)[0]
+
+ISAAC_ROS_COMMON_VERSION_INFO = Path(ISAAC_ROS_COMMON_PATH) / 'isaac_ros_common-version-info.py'
+
+spec = importlib.util.spec_from_file_location(
+    'isaac_ros_common_version_info',
+    ISAAC_ROS_COMMON_VERSION_INFO
+)
+
+isaac_ros_common_version_info = importlib.util.module_from_spec(spec)
+sys.modules['isaac_ros_common_version_info'] = isaac_ros_common_version_info
+spec.loader.exec_module(isaac_ros_common_version_info)
+
+from isaac_ros_common_version_info import GenerateVersionInfoCommand  # noqa: E402, I100
 
 package_name = 'isaac_ros_jetson_stats'
 
@@ -49,6 +70,9 @@ setup(
         'console_scripts': [
                 'jtop = isaac_ros_jetson_stats.ros2_jtop_node:main',
         ],
+    },
+    cmdclass={
+        'build_py': GenerateVersionInfoCommand,
     },
 )
 # EOF
