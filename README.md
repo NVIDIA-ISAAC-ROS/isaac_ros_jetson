@@ -4,7 +4,7 @@ Isaac ROS Jetson
 
 ## Overview
 
-[Isaac ROS Jetson](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_jetson) simplifies the process of monitoring and managing NVIDIA Jetson, empowering developers to optimize performance, ensure system stability, and streamline development workflows for ROS 2.
+Isaac ROS Jetson simplifies the process of monitoring and managing NVIDIA Jetson, empowering developers to optimize performance, ensure system stability, and streamline development workflows for ROS 2.
 
 ## What is `jetson-stats`?
 
