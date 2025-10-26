@@ -8,10 +8,10 @@ Isaac ROS Jetson simplifies the process of monitoring and managing NVIDIA Jetson
 
 ## What is `jetson-stats`?
 
-[jetson_stats](https://rnext.it/jetson_stats) is a comprehensive utility tool specifically designed for NVIDIA Jetson, including the Jetson Nano, Jetson TX1, TX2, Xavier, and Orin series.
+[jetson_stats](https://rnext.it/jetson_stats) is a comprehensive utility tool specifically designed for NVIDIA Jetson, including the Jetson Nano, Jetson TX1, TX2, Xavier, Orin, and Thor series.
 It provides a variety of functionalities to monitor and manage the Jetson device’s performance, temperature, power usage, and more.
 
-<div align="center"><a class="reference internal image-reference" href="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/main/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_jetson/jetson_stats.png/"><img alt="image" src="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/main/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_jetson/jetson_stats.png/" width="880px"/></a></div>
+<div align="center"><a class="reference internal image-reference" href="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.0/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_jetson/jetson_stats.png/"><img alt="image" src="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.0/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_jetson/jetson_stats.png/" width="880px"/></a></div>
 
 ## How Does it Work with Isaac ROS?
 
@@ -38,7 +38,7 @@ Isaac ROS Jetson provides a set of messages to monitor the health of your board 
 
 As an illustration, consider a scenario where your board is under high power demand. In such a case, a node that reads the diagnostics message can dynamically adjust the `nvp` power mode or even disable certain nodes that are consuming excessive computational resources. This dynamic power management capability is a key feature of the tool.
 
-Using the `isaac_ros_jetson` package in a Docker container can greatly improve the robustness and reliability of your project. This method ensures a consistent and isolated environment, reducing compatibility issues and making deployment across different platforms easier.
+Using the `isaac_ros_jetson` package in the Isaac ROS environment can greatly improve the robustness and reliability of your project. This method ensures a consistent and isolated environment, reducing compatibility issues and making deployment across different platforms easier.
 
 ---
 
@@ -59,4 +59,4 @@ See [Isaac ROS Documentation](https://nvidia-isaac-ros.github.io/repositories_an
 
 ## Latest
 
-Update 2024-12-10: Update to be compatible with JetPack 6.1
+Update 2025-10-24: Support for ROS 2 Jazzy

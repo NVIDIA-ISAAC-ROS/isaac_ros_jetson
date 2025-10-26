@@ -65,10 +65,14 @@ setup(
     maintainer_email='isaac-ros-maintainers@nvidia.com',
     description='Isaac ROS Jetson. Set of packages to control your jetson from your board',
     license='MIT',
-    tests_require=['pytest'],
+    extras_require={
+        'test': [
+            'pytest'
+        ]
+    },
     entry_points={
         'console_scripts': [
-                'jtop = isaac_ros_jetson_stats.ros2_jtop_node:main',
+            'jtop = isaac_ros_jetson_stats.ros2_jtop_node:main',
         ],
     },
     cmdclass={
