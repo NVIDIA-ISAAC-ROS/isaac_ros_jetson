@@ -11,7 +11,7 @@ Isaac ROS Jetson simplifies the process of monitoring and managing NVIDIA Jetson
 [jetson_stats](https://rnext.it/jetson_stats) is a comprehensive utility tool specifically designed for NVIDIA Jetson, including the Jetson Nano, Jetson TX1, TX2, Xavier, Orin, and Thor series.
 It provides a variety of functionalities to monitor and manage the Jetson device’s performance, temperature, power usage, and more.
 
-<div align="center"><a class="reference internal image-reference" href="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.0/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_jetson/jetson_stats.png/"><img alt="image" src="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.0/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_jetson/jetson_stats.png/" width="880px"/></a></div>
+<div align="center"><a class="reference internal image-reference" href="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.1/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_jetson/jetson_stats.png/"><img alt="image" src="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.1/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_jetson/jetson_stats.png/" width="880px"/></a></div>
 
 ## How Does it Work with Isaac ROS?
 
@@ -59,4 +59,4 @@ See [Isaac ROS Documentation](https://nvidia-isaac-ros.github.io/repositories_an
 
 ## Latest
 
-Update 2025-10-24: Support for ROS 2 Jazzy
+Update 2026-02-02: Support for two new Docker-optional development and deployment modes
