@@ -113,7 +113,7 @@ class JTOPPublisher(Node):
             resp.done = new_status
         else:
             resp.done = False
-            self.get_logger().warn('Jetson clocks not available')
+            self.get_logger().warning('Jetson clocks not available')
         return resp
 
     def nvpmodel_service(self, req, resp):
@@ -155,7 +155,7 @@ class JTOPPublisher(Node):
             resp.power_mode = power_mode
         else:
             resp.power_mode = 'Not available'
-            self.get_logger().warn('NVPModel not available on this board')
+            self.get_logger().warning('NVPModel not available on this board')
         return resp
 
     def jetson_callback(self):
